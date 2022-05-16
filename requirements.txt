@@ -1,0 +1,5 @@
+setuptools>=51.0.0
+configparser>=5.0.1
+kaitaistruct>=0.9
+asyncio>=3.4.3
+pytak == 3.5.2

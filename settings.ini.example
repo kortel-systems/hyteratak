@@ -1,0 +1,24 @@
+[forward-to-pc]
+; receiving computer IP address as configured in Forward to PC IP
+ip = 0.0.0.0
+; gps ports as configured in Forward to PC GPS slot ports
+gps1_port = 30003
+gps2_port = 30004
+
+[hyteratak]
+; TAK server address, use udp broadcast
+url = broadcast:239.2.3.1
+; CoT defaults for all radios
+type = a-f-G-U-C
+stale = 3600
+group = Green
+role = Team Member
+
+[100]
+; Radio ID 100 specific config
+type = a-f-G-U-C
+stale = 600
+group = Green
+role = Medic
+name = Medic 100
+uid = Medic-100
