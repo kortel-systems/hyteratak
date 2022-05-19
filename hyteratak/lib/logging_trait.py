@@ -21,6 +21,6 @@ class LoggingTrait:
     def log_exception(self, exc):
         self.get_logger().exception(exc)
 
-__author__ = "Kortel <info@kortel.systems>"
+__author__ = "Kortel <hytera@kortel.systems>"
 __copyright__ = "Copyright 2022 Kortel"
 __license__ = "Apache License, Version 2.0"
