@@ -8,6 +8,12 @@ gps2_port = 30004
 [hyteratak]
 ; TAK server address, use udp broadcast
 url = broadcast:239.2.3.1
+; other connection methods
+; udp with host:port
+; url=udp:192.168.1.0:1234
+; tcp with host:port
+; url=tcp:192.168.1.0:2345
+
 ; CoT defaults for all radios
 type = a-f-G-U-C
 stale = 3600

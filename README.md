@@ -35,6 +35,22 @@ The `settings.ini` file structure is described below:
     * name - radio name to be displayed [RadioID (Hytera)]
     * uid - evant ID [HYTERA.RadioID]
 
+## Other connection options
+
+You can use other options for sending to CoT server and use IP or hostnames.
+
+**UDP protocol**
+```
+[hyteratak]
+url=udp:192.168.1.0:1234
+```
+
+**TCP protocol**
+```
+[hyteratak]
+url=tcp:192.168.1.0:2345
+```
+
 ## Support HyteraTAK Development
 
 HyteraTAK has been developed for the Disaster Response, Public Safety and
