@@ -4,15 +4,19 @@ ip = 0.0.0.0
 ; gps ports as configured in Forward to PC GPS slot ports
 gps1_port = 30003
 gps2_port = 30004
+; define host list to forward received packets on the same ports
+; gps1 packets will be forwarded to each host on port 30003
+; gps2 packets will be forwarded to each host on port 30004
+; forward_to=host1,host2
 
 [hyteratak]
 ; TAK server address, use udp broadcast
-url = broadcast:239.2.3.1
+url = broadcast://239.2.3.1
 ; other connection methods
 ; udp with host:port
-; url=udp:192.168.1.0:1234
+; url=udp://192.168.1.0:1234
 ; tcp with host:port
-; url=tcp:192.168.1.0:2345
+; url=tcp://192.168.1.0:2345
 
 ; CoT defaults for all radios
 type = a-f-G-U-C
