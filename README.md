@@ -8,6 +8,15 @@ It can forward all packets to a list of hosts. All packets received on one of sl
 
 It does not require running under root/admin user, if you bind to ports over 1024.
 
+## Support HyteraTAK Development
+
+HyteraTAK has been developed for the Disaster Response, Public Safety and
+Frontline Healthcare community. This software is currently provided at no-cost
+to non-commercial users. Any contribution you can make to this project's development
+efforts is greatly appreciated.
+
+[![Support HyteraTAK development: Buy me a coffee!](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/kortel)
+
 ## Required configuration
 
 The repeater needs to have Forward to PC enabled with your computer IP address and both Radio GPS slot ports enabled.
@@ -93,13 +102,6 @@ HyteraTAKsupports the following network protocols:
 * TLS Unicast
 * UDP Unicast
 * UDP Broadcast
-
-## Support HyteraTAK Development
-
-HyteraTAK has been developed for the Disaster Response, Public Safety and
-Frontline Healthcare community. This software is currently provided at no-cost
-to non-commercial users. Any contribution you can make to this project's development
-efforts is greatly appreciated.
 
 ## Installation
 
