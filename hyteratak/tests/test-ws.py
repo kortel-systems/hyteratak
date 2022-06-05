@@ -12,17 +12,16 @@ except ImportError:
     )
 
 from hyteratak.tests.prettyprint import prettyprint
-from hyteratak.kaitai.hytera_simple_transport_reliability_protocol import HyteraSimpleTransportReliabilityProtocol
+from hyteratak.lib.hytera_tak_translator import HyteraTakTranslator
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("use as %s <hexstring>" % sys.argv[0])
-        exit(0)
-
-    packet = HyteraSimpleTransportReliabilityProtocol.from_bytes(
-        bytes.fromhex(sys.argv[1])
-    )
-    prettyprint(packet)
+    val = [(b'N', b'1234.56', 12.576),
+        (b'S', b'1234.56', -12.576),
+        (b'E', b'11234.56', 112.576),
+        (b'W', b'11234.56', -112.576),
+    ]
+    for t in val:
+        print(f"{t[0]} {t[1]} expected {t[2]} = {HyteraTakTranslator.ddmm2deg(t[0], t[1])}")
 
 __author__ = "Kortel <hytera@kortel.systems>"
 __copyright__ = "Copyright 2022 Kortel"
