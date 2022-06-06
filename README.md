@@ -1,12 +1,9 @@
-# HyteraTAK - Hytera to Cursor-On-Target Gateway
+# HyteraCoT - Hytera to Cursor-On-Target Gateway
 
-This software will track your Hytera radios on WinTAK.
+The HyteraCoT Hytera to Cursor-On-Target Gateway transforms Hytera radio position information into Cursor On Target (COT) Position Location Information (PLI) for display on Situational Awareness (SA) applications such as the Android Team Awareness Kit (ATAK), WinTAK, RaptorX, TAKX, iTAK, et al.
 
-It connects to your Hytera repeater (tested RD965) via Ethernet cable, registers with repeater and gets radio positions (tested PD985 and PD785) to update on WinTAK.
+For more information on the TAK suite of tools, see: https://www.tak.gov/
 
-It can forward all packets to a list of hosts. All packets received on one of slot ports will be forwarded to all listed hosts on the same port number.
-
-It does not require running under root/admin user, if you bind to ports over 1024.
 
 ## Support HyteraTAK Development
 
@@ -17,10 +14,21 @@ efforts is greatly appreciated.
 
 [![Support HyteraTAK development: Buy me a coffee!](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/kortel)
 
+
+## How it works
+
+The HyteraCoT Hytera to Cursor-On-Target Gateway connects to your Hytera repeater (tested RD965) via Ethernet cable, registers with repeater and transforms Hytera radio positions (tested PD985 and PD785) tinto Cursor On Target format to be displayed on Situational Awareness apps.
+
+It can also forward all packets it receives to a list of hosts. All packets received on one of slot ports will be forwarded to all listed hosts on the same port number.
+
+It does not require running under root/admin user, if you bind to ports over 1024.
+
+
 ## Required configuration
 
 The repeater needs to have Forward to PC enabled with your computer IP address and both Radio GPS slot ports enabled.
 Radios need to have GPS Trigger enabled (time, distance and/or both).
+
 
 ## Settings file
 
@@ -47,6 +55,7 @@ The `settings.ini` file structure is described below:
     * name - radio name to be displayed [RadioID (Hytera)]
     * uid - evant ID [HYTERA.RadioID]
 
+
 ## Other connection options
 
 You can use other options for sending to CoT server and use IP or hostnames.
@@ -63,6 +72,7 @@ url=udp://192.168.1.2:1234
 url=tcp://192.168.1.2:2345
 ```
 
+
 ## Packet forwarding
 
 HyteraCoT can forward all received packets to a defined list of hosts.
@@ -77,6 +87,7 @@ You define the host list using `forward_to` in `[forward-to-pc]` section as a co
 [forward-to-pc]
 forward_to=host1,192.168.1.3
 ```
+
 
 ## Servers and protocols
 
@@ -102,6 +113,7 @@ HyteraTAKsupports the following network protocols:
 * TLS Unicast
 * UDP Unicast
 * UDP Broadcast
+
 
 ## Installation
 

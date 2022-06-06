@@ -109,7 +109,7 @@ class HyteraTakTranslator(pytak.MessageWorker, LoggingTrait):
         degrees = ddmm[:brk]
         minutes = ddmm[brk:]
         latlong = int(degrees) + float(minutes) / 60
-        if b"WS" in hemi:
+        if hemi in b"WS":
             latlong *= -1
         return latlong
 
